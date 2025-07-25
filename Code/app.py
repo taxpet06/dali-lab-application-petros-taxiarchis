@@ -121,31 +121,31 @@ def train():
         cols = st.columns([1, 4, 1])
         with cols[1]:
             if 'current_image_index' not in st.session_state:
-                st.session_state.current_image_index = 0
+                st.session_state.current_image_index2 = 0
             
-            current_img = st.session_state.training_masks[st.session_state.current_image_index]
+            current_img = st.session_state.training_masks[st.session_state.current_image_index2]
             st.image(
                 current_img,
-                caption=f"Image {st.session_state.current_image_index + 1}/{len(st.session_state.training_masks)}: {current_img.name}",
+                caption=f"Image {st.session_state.current_image_index2 + 1}/{len(st.session_state.training_masks)}: {current_img.name}",
                 use_container_width=True
             )
         
         # Navigation arrows
         with cols[0]:
             if st.button("<--"):
-                st.session_state.current_image_index = max(0, st.session_state.current_image_index - 1)
+                st.session_state.current_image_index2 = max(0, st.session_state.current_image_index2 - 1)
                 st.rerun()
         
         with cols[2]:
             if st.button("-->"):
-                st.session_state.current_image_index = min(len(st.session_state.training_masks) - 1, st.session_state.current_image_index + 1)
+                st.session_state.current_image_index2 = min(len(st.session_state.training_masks) - 1, st.session_state.current_image_index2 + 1)
                 st.rerun()
         
         # Clear all button
         if st.button("Remove All Masks"):
             st.session_state.training_masks = []
             if 'current_image_index' in st.session_state:
-                del st.session_state.current_image_index
+                del st.session_state.current_image_index2
             st.rerun() # Refresh
 
 def test():
