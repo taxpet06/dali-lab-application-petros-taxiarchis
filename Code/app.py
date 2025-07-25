@@ -12,7 +12,22 @@ import streamlit as st
 
 def home():
     st.title("Home")
-    st.write("Instructions")
+    st.markdown("""
+        **Instructions**:
+        
+        1.  Navigate to the ***Train*** tab
+        2.  Load your images and masks accordingly  
+                - Both images and masks do not need to be loaded in proper order as long as their filename ends with a number  
+                - You may use the ***Remove all images*** or ***Remove all masks*** buttons if a mistake is made
+        3.  Use the ***Train*** button and save the trained model
+        4.  Navigate to the ***Test*** tab
+        5.  Load the either the model that was just trained or a model of your choice
+        6.  Load testing data
+        7.  Use the ***Segment*** button to perform barnacle classification
+        8.  The *Metrics* tab will display a variety of useful information and graphs regarding your training and testing datasets
+        9.  The ***Images*** tab will display the images and the overlayed masks for your training and testing datasets
+        """
+    )
 
 def train():
     st.title("Train")
