@@ -14,6 +14,7 @@ from tqdm import tqdm
 import torch.nn.functional as F
 import streamlit as st
 import io
+import pandas as pd
 
 # Suppress warnings
 warnings.filterwarnings("ignore")
