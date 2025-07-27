@@ -1,0 +1,21 @@
+# Web framework
+streamlit
+
+# Deep Learning
+torch
+torchvision
+
+# Computer Vision
+opencv-python-headless
+Pillow
+
+# Scientific Computing
+numpy
+matplotlib
+pandas
+
+# Progress bars
+tqdm
+
+# Mobile SAM
+mobile-sam
