@@ -7,4 +7,5 @@ Pillow
 matplotlib
 pandas
 tqdm
+timm
 git+https://github.com/ChaoningZhang/MobileSAM.git
